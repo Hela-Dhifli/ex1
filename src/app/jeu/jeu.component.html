@@ -1,0 +1,26 @@
+
+<div class="jeuDevin">
+      <div class="form" >
+        
+        <form class="form-group">
+          
+          <h3> Bienvenue au Jeu devin </h3> 
+          
+          <label > <br> Saisir un nombre entre 1 et 100 <br> <span class= "nombreTentative"> Encore {{6-nombreEssai}} tentatives </span> </label><br><br>
+          <input type="text" class="form-control" #entree ><br>
+  
+       
+        
+          <button [disabled]="test" class="ml-1 btn btn-success btn-sm mr-1" (click)="onClick(entree.value)">Valider </button> &nbsp;
+          <button [disabled]="!test" id ="rejouer" class="ml-2 btn btn-info btn-sm mr-2"(click)="rejouer()">Rejouer</button>
+          <br><br>
+          <!-- <img *ngIf="test" src="assets/images/image.jpg"> -->
+
+          
+          <p><br>{{ messageOutput }}</p>
+       
+
+      </form>
+</div>
+  
+   
